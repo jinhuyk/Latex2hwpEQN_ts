@@ -58,8 +58,8 @@ function convSupr(text) {
     rst = rst.replace(/\\overline\{/g, "bar{");
     rst = rst.replace(/\\overrightarrow\{/g, "vec{");
     rst = rst.replace(/\\mid/g, "vert");
-    rst = rst.replace(/\\\{/g, "left{");
-    rst = rst.replace(/\\\}/g, "right}");
+    rst = rst.replace(/\\\{/g, " left{");
+    rst = rst.replace(/\\\}/g, " right}");
     rst = rst.replace(/\{/g, "{`");
     return rst;
 }
