@@ -47,7 +47,11 @@ function convOper(text) {
     return rst;
 }
 function convDeco(text) {
-    return text.replace(/bar\{(.*?)\}/g, (_, content) => `{bar{${content}}}`);
+    let rst = text;
+    rst = rst.replace(/leftleft/g,"left");
+    rst = rst.replace(/rightright/g,"right");
+    rst.replace(/bar\{(.*?)\}/g, (_, content) => `{bar{${content}}}`);
+    return rst;
 }
 function convSupr(text) {
     let rst = text;
