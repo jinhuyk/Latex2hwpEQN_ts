@@ -49,6 +49,8 @@ function convOper(text) {
 function convDeco(text) {
     let rst = text;
     rst = rst.replace(/leftleft/g,"left");
+    rst = rst.replace(/left left/g,"left");
+    rst = rst.replace(/right right/g,"right");
     rst = rst.replace(/rightright/g,"right");
     rst.replace(/bar\{(.*?)\}/g, (_, content) => `{bar{${content}}}`);
     return rst;
