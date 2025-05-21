@@ -27,7 +27,7 @@ function convCases2(text) {
     return text.replace(pattern, (_, _arrtype, content) => `cases{ ${content} }`);
 }
 function convRoot(text) {
-    return text.replace(/\\sqrt\[(.*?)\]\{(.*?)\}/g, (_, root, inside) => `root{${root}}of{${inside}`);
+    return text.replace(/\\sqrt\[(.*?)\]\{(.*?)\}/g, (_, root, inside) => `root{${root}}of{${inside}}`);
 }
 function convSpace(text) {
     text = text.replace(/\\,/g, '`');
